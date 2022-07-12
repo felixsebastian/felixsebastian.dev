@@ -18,7 +18,7 @@ const SideLink = (props) => (
       `}
     >
       {props.children}
-      <Text size={0}>
+      <Text size={0} color="weak">
         <Icon icon="arrow-up-right-from-square" />
       </Text>
     </div>
@@ -26,50 +26,58 @@ const SideLink = (props) => (
 );
 
 const BookPost = (props) => (
-  <Stack>
-    <Text bold sans tight color="strong" size={6}>
-      <Icon icon="book" /> {props.title}
-    </Text>
-    <Text weight={500} sans color="weak" size={4}>
-      {props.author} ({props.year})
-    </Text>
+  <Stack gap={4}>
+    <Stack>
+      <Text bold sans tight color="strong" size={6}>
+        <Icon icon="book" /> {props.title}
+      </Text>
+      <Text weight={500} sans color="weak" size={4}>
+        {props.author} ({props.year})
+      </Text>
+    </Stack>
     <Text>{props.comments}</Text>
   </Stack>
 );
 
 const PaperPost = (props) => (
-  <Stack>
-    <SideLink {...props}>
-      <Text bold sans tight color="strong" size={6}>
-        <Icon icon="file-lines" /> {props.title}
+  <Stack gap={4}>
+    <Stack>
+      <SideLink {...props}>
+        <Text bold sans tight color="strong" size={6}>
+          <Icon icon="file-lines" /> {props.title}
+        </Text>
+      </SideLink>
+      <Text weight={500} sans color="weak" size={4}>
+        {props.author} ({props.year})
       </Text>
-    </SideLink>
-    <Text weight={500} sans color="weak" size={4}>
-      {props.author} ({props.year})
-    </Text>
+    </Stack>
     <Text>{props.comments}</Text>
   </Stack>
 );
 
 const BlogPost = (props) => (
-  <Stack>
-    <SideLink {...props}>
-      <Text bold sans tight color="strong" size={6}>
-        <Icon icon="pen-clip" /> {props.title}
+  <Stack gap={4}>
+    <Stack>
+      <SideLink {...props}>
+        <Text bold sans tight color="strong" size={6}>
+          <Icon icon="pen-clip" /> {props.title}
+        </Text>
+      </SideLink>
+      <Text weight={500} sans color="weak" size={4}>
+        {props.author} ({props.year})
       </Text>
-    </SideLink>
-    <Text weight={500} sans color="weak" size={4}>
-      {props.author} ({props.year})
-    </Text>
+    </Stack>
     <Text>{props.comments}</Text>
   </Stack>
 );
 
 const YouTubePost = (props) => (
-  <Stack>
-    <Text bold sans tight color="strong" size={6}>
-      <Icon icon={["fab", "youtube"]} /> {props.title}
-    </Text>
+  <Stack gap={4}>
+    <Stack>
+      <Text bold sans tight color="strong" size={6}>
+        <Icon icon={["fab", "youtube"]} /> {props.title}
+      </Text>
+    </Stack>
     <Text>{props.description}</Text>
     <iframe
       width="560"

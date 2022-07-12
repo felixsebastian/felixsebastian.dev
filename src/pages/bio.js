@@ -29,8 +29,8 @@ const Content = () => {
           </Text>
         </Stack>
         <Text align="justify">
-          I build web applications from end to end with a passion for elegant,
-          user centred solutions. Currently creating a better world of work with{" "}
+          I build web apps from end to end with a love for clean code and
+          human centred design. Currently working on creating a better world of work with{" "}
           <Link target="_blank" href="https://www.cultureamp.com/">
             Culture Amp
           </Link>

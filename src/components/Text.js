@@ -28,7 +28,7 @@ const TextNode = styled.p(({ size, ...props }) => {
 
 const Text = (props) => {
   const contextProps = useContext(context)
-  return <TextNode {...props}  {...contextProps} />
+  return <TextNode {...contextProps} {...props} />
 }
 
 export default Text;

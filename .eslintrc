@@ -1,0 +1,12 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/rule-name": "error"
+  }
+}

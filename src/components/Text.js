@@ -1,11 +1,14 @@
+import React from 'react'
 import { createStyleObject } from "@capsizecss/core";
 import fontMetricsMono from "@capsizecss/metrics/iBMPlexMono";
 import fontMetricsSans from "@capsizecss/metrics/iBMPlexSans";
 import styled from "@emotion/styled";
+import { useContext } from "react";
+import { context } from './TextContext'
 
 const sizes = [10, 11, 12, 13, 14, 16, 18, 20, 22, 25, 28, 32, 36, 40, 46, 52];
 
-const Text = styled.p(({ size, ...props }) => {
+const TextNode = styled.p(({ size, ...props }) => {
   const pxSize = sizes[typeof size === "number" ? size : 2];
 
   return {
@@ -22,5 +25,10 @@ const Text = styled.p(({ size, ...props }) => {
     }),
   };
 });
+
+const Text = (props) => {
+  const contextProps = useContext(context)
+  return <TextNode {...props}  {...contextProps} />
+}
 
 export default Text;

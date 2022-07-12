@@ -10,30 +10,28 @@ import { css, useTheme } from "@emotion/react";
 import focusOutlineCss from "../utils/focusOutlineCss";
 
 const DotPoint = (props) => (
-  <Text align="justify">
-    <div
-      css={css`
+  <div
+    css={css`
         display: flex;
       `}
-    >
-      <div>
-        <Icon icon="caret-right" />
-        <span
-          css={css`
+  >
+    <div>
+      <Icon icon="caret-right" />
+      <span
+        css={css`
             display: inline-block;
             width: ${gs()};
           `}
-        />
-      </div>
-      <div
-        css={css`
+      />
+    </div>
+    <div
+      css={css`
           flex: 1;
         `}
-      >
-        {props.children}
-      </div>
+    >
+      <Text align="justify">{props.children}</Text>
     </div>
-  </Text>
+  </div>
 );
 
 const OintLink = (props) => {

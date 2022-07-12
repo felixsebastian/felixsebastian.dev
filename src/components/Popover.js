@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
@@ -31,6 +31,12 @@ export default function Popover(props) {
     }
   );
 
+  const [showPopover, setShowPopover] = useState(false);
+
+  useEffect(() => {
+    setShowPopover(true)
+  }, [])
+
   return (
     <>
       <div
@@ -43,13 +49,15 @@ export default function Popover(props) {
         ref={setreferenceElementRef}
       >
         {props.children}
-        <Thing
-          style={styles.popper}
-          {...attributes.popper}
-          ref={setpopoverElementRef}
-        >
-          <Text weight={500}>{props.text}</Text>
-        </Thing>
+        {showPopover &&
+          <Thing
+            style={styles.popper}
+            {...attributes.popper}
+            ref={setpopoverElementRef}
+          >
+            <Text weight={500}>{props.text}</Text>
+          </Thing>
+        }
       </div>
     </>
   );

@@ -6,7 +6,7 @@ import Text from "../components/Text";
 import Icon from "../components/Icon";
 import Inline from "../components/Inline";
 import TextContext from "../components/TextContext";
-import BlockLink from "../components/BlockLink";
+import Link from "../components/Link";
 
 function ProjectCard(props) {
   return (
@@ -14,14 +14,18 @@ function ProjectCard(props) {
       <Text color="strong" sans weight="bold" size={8}>
         {props.title}
       </Text>
-      <TextContext attrs={{ size: 4, bold: true }}>
+      <TextContext attrs={{ size: 4, bold: true, color: 'link' }}>
         <Inline gap={3}>
-          <BlockLink target="_blank" href={props.url}>
-            <Text><Icon icon="arrow-up-right-from-square" /> Live demo</Text>
-          </BlockLink>
-          <BlockLink target="_blank" href={props.github}>
-            <Text><Icon icon={["fab", "github"]} /> GitHub</Text>
-          </BlockLink>
+          <Text>
+            <Link target="_blank" href={props.url}>
+              <Icon icon="arrow-up-right-from-square" /> Live demo
+            </Link>
+          </Text>
+          <Text>
+            <Link target="_blank" href={props.github}>
+              <Icon icon={["fab", "github"]} /> GitHub
+            </Link>
+          </Text>
         </Inline>
       </TextContext>
       <Text align="justify">{props.description}</Text>

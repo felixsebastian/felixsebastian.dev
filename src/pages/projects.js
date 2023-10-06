@@ -14,13 +14,15 @@ function ProjectCard(props) {
       <Text color="strong" sans weight="bold" size={8}>
         {props.title}
       </Text>
-      <TextContext attrs={{ size: 4, bold: true, color: 'link' }}>
+      <TextContext attrs={{ size: 4, bold: true, color: "link" }}>
         <Inline gap={3}>
-          <Text>
-            {props.url && (<Link target="_blank" href={props.url}>
-              <Icon icon="arrow-up-right-from-square" /> Live demo
-            </Link>)}
-          </Text>
+          {props.url && (
+            <Text>
+              <Link target="_blank" href={props.url}>
+                <Icon icon="arrow-up-right-from-square" /> Live demo
+              </Link>
+            </Text>
+          )}
           <Text>
             <Link target="_blank" href={props.github}>
               <Icon icon={["fab", "github"]} /> GitHub

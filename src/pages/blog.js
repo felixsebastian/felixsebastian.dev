@@ -142,7 +142,7 @@ const IndexPage = () => {
           <YouTubePost
             title="Scrum et al."
             id="IyNPeTn8fpo"
-            description="I'm surprised how often people miss the point of scrum, they should watch this."
+            description="Scrum doesn't need to be complicated"
           />
           <BookPost
             title="Domain-Driven Design Distilled"

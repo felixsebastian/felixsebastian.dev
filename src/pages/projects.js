@@ -17,9 +17,9 @@ function ProjectCard(props) {
       <TextContext attrs={{ size: 4, bold: true, color: 'link' }}>
         <Inline gap={3}>
           <Text>
-            <Link target="_blank" href={props.url}>
+            {props.url && (<Link target="_blank" href={props.url}>
               <Icon icon="arrow-up-right-from-square" /> Live demo
-            </Link>
+            </Link>)}
           </Text>
           <Text>
             <Link target="_blank" href={props.github}>
@@ -39,28 +39,20 @@ const IndexPage = () => {
       <BasicPage>
         <Stack gap={10}>
           <ProjectCard
-            title="React Weekly Availability"
-            description="A use case I've encountered a few times is to ask users for their general availability on a weekly basis. This react component makes that super simple with good UX."
-            github="https://github.com/felixsebastian/gong-simulator"
-            url="https://csb-g0fn1k-felixsebastian.vercel.app/"
+            title="Plastic design system"
+            description="Culture Amp esque design system based on specimen using Culture Amps design tokens."
+            github="https://github.com/felixsebastian/plastic"
           />
           <ProjectCard
             title="Gong simulator"
-            description="Whipped up this virtual gong one afternoon, useful for announcements."
+            description="Good for announcing releases."
             github="https://github.com/felixsebastian/gong-simulator"
             url="https://csb-g0fn1k-felixsebastian.vercel.app/"
           />
           <ProjectCard
-            title="Posix design system"
-            description="Design system used to build this site."
-            github="https://github.com/felixsebastian/gong-simulator"
-            url="https://csb-g0fn1k-felixsebastian.vercel.app/"
-          />
-          <ProjectCard
-            title="Solar system builder"
-            description="Create your own solar system"
-            github="https://github.com/felixsebastian/gong-simulator"
-            url="https://csb-g0fn1k-felixsebastian.vercel.app/"
+            title="Specimen barebones design system"
+            description="Collection of design system primitives to deal with layout, colour and typography."
+            github="https://github.com/felixsebastian/specimen"
           />
         </Stack>
       </BasicPage>

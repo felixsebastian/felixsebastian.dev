@@ -7,8 +7,8 @@ import { css } from "@emotion/react";
 const pages = [
   { id: "bio", name: "Bio" },
   { id: "experience", name: "Experience" },
-  { id: "projects", name: "Projects" },
   { id: "blog", name: "Blog" },
+  { id: "projects", name: "Projects" },
 ];
 
 const Nav = (props) => (

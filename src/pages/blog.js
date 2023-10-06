@@ -84,7 +84,7 @@ const YouTubePost = (props) => (
       height="315"
       src={`https://www.youtube.com/embed/${props.id}`}
       title="YouTube video player"
-      frameborder="0"
+      frameBorder="0"
       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
@@ -97,29 +97,34 @@ const IndexPage = () => {
       <BasicPage>
         <Stack gap={10}>
           <BookPost
+            title="The DevOps Handbook"
+            author="Gene Kim et al."
+            year="2016"
+            comments="This book is so hard to get through, but shines a light on the DevOps revolution that took place over the past 20 years which is good for those who weren’t around to experience it. I think DevOps practices are great but Gene Kim et al. do make it sound a bit dogmatic."
+          />
+          <BookPost
+            title="Designing Data Intensive Applications"
+            author="Martin Kleppmann"
+            year="2017"
+            comments="This book is gold dust, I read it 3 times. It contains a lot of extreme pessimism (this thing can fall over in many terrifying ways) which is helpful for thinking about other areas of software development not covered by this book."
+          />
+          <BookPost
+            title="Building Microservices"
+            author="Sam Newman"
+            year="2014"
+            comments="This is such an important book for anyone developing web apps and thinking about microservices. It's pretty basic and easy to understand, and a good prelude to more in depth books like Designing Data Intensive Applications."
+          />
+          <BookPost
+            title="Continuous Discovery Habits"
+            author="Teresa Torres"
+            year="2021"
+            comments="Some chapters of this are relevant to engineers who want to understand and work better with product people."
+          />
+          <BookPost
             title="A Philosophy of Software Design"
             author="John Ousterhout"
             year="2018"
-            comments="Still reading this, very interesting so far."
-          />
-          <BlogPost
-            title="The TypeScript Tax"
-            author="Eric Elliot"
-            year="2019"
-            url="https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b"
-            comments="Very nice analysis that supports many of my intuitions about TypeScript."
-          />
-          <BookPost
-            title="Domain-Driven Design"
-            author="Eric Evans"
-            year="2003"
-            comments="Evans' idea of ubiquitous language seems like a formalisation of what's normally left to developers intuition and common sense. While this might be useful in some high stakes settings where domain experts are available, and has led to the discovery of other important concepts, my feeling is that it's probably unhelpful for most projects. I love how clearly Evans writes and still got a lot out of the book."
-          />
-          <BookPost
-            title="Domain-Driven Design Distilled"
-            author="Vaughn Vernon"
-            year="2016"
-            comments="I didn't enjoy this author nearly as much as Evans, but it was the perfect introduction to the topic."
+            comments="This book was good but many chapters seemed a bit empty to me. I did find a few great (simple) ideas such as 'deep' abstractons and optimising for the common-case."
           />
           <PaperPost
             title="Static Typing Where Possible, Dynamic Typing When Needed"
@@ -129,10 +134,10 @@ const IndexPage = () => {
             comments="Thankfully TypeScript affords us this flexibility."
           />
           <BookPost
-            title="Clean Architecture"
-            author="Robert Martin"
-            year="2017"
-            comments="Despite being published more recently than Clean Code, this book already feels less relevant. It seems like a lot of assumptions are made about programming and compilation, that probably make more sense in the Java world. Still, some solid ideas and worth the read."
+            title="The Pragmatic Programmer"
+            author="Andy Hunt & Dave Thomas"
+            year="1999"
+            comments="Some excellent general advice in this book around basic things like honest communication and version control. Some of it seemed a bit outdated. Some of it just seemed like random opinions deemed to be the 'most pragmatic' way."
           />
           <YouTubePost
             title="Scrum et al."
@@ -140,39 +145,28 @@ const IndexPage = () => {
             description="I'm surprised how often people miss the point of scrum, they should watch this."
           />
           <BookPost
-            title="The Phoenix Project"
-            author="Gene Kim, Kevin Behr, and George Spafford"
-            year="2013"
-            comments="Very interesting."
+            title="Domain-Driven Design Distilled"
+            author="Vaughn Vernon"
+            year="2016"
+            comments="A good introduction to DDD concepts, which are cool but much more relevant for enterprises where domain experts are the norm."
           />
           <BookPost
-            title="Continuous discovery habits"
-            author="Teresa Torres"
-            year="1999"
-            comments="I thought I had discovery, design and delivery stuff figured out but Torres totally opened my eyes to new ways of thinking about it. Some of this book was not super relevant to me as a programmer, but worth reading and skipping a chapter here or there."
+            title="Clean Architecture"
+            author="Robert C. Martin"
+            year="2017"
+            comments="A great reference on SOLID principles and other patterns. A good starting point for thinking about software design."
+          />
+          <BookPost
+            title="The Phoenix Project"
+            author="Gene Kim et al."
+            year="2013"
+            comments="Good to see how the IT industry worked in the 90s and 00s. Made me appreciate modern practices and better understand what the motivation behind them was."
           />
           <BookPost
             title="Clean Code"
-            author="Robert Martin"
+            author="Robert C. Martin"
             year="2008"
-            comments="Bob Martin's long list of rules mostly aligned with my prior intuitions about programming. I've always advocated small functions and been wary of redundant, weasely naming. I feel slightly validated. Maybe a lot of it is common sense, but it's nice to have it all in one document that can be the basis of coding standards."
-          />
-          <BookPost
-            title="Head First Design Patterns"
-            author="Eric Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra"
-            year="2004"
-            comments="Fun, palatable intro to OOP design patterns."
-          />
-          <BookPost
-            title="The Pragmatic Programmer"
-            author="Andy Hunt, Dave Thomas"
-            year="1999"
-            comments="An absolute must-read for any programmer."
-          />
-          <YouTubePost
-            title="The Secret of Simple Code"
-            id="F-JvvFlYcts"
-            description="Love this clip from Eric Elliot discussing the importance of abstraction."
+            comments="Most of the advice in this book is either obvious enough or already widely adopted, such that most experienced coders would be doing it anyway. Still, it's good to have your habits validated by an industry legend and get a deeper understanding of the reasoning behind it."
           />
         </Stack>
       </BasicPage>
